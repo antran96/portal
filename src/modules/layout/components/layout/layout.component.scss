@@ -1,0 +1,72 @@
+@import '../../../../styles.scss';
+
+$--height-top-nav: 65px;
+$--height-main: calc(100% - #{$--height-top-nav});
+$--width-side-nav: 270px;
+$--width-side-nav-active: 65px;
+
+.layout {
+    &-container {
+       position: fixed;
+       width: 100%;
+       min-height: 100vh;
+       overflow-x: hidden;
+       background-color: $--default;
+       .left-inner {
+            position: fixed;
+            width: $--width-side-nav;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba($color: $--light, $alpha: 0.1);
+            border-left: 5em solid rgba($color: $--lighter, $alpha: 0.1);
+            transition: 0.5s;
+            overflow-y: auto;
+            overflow-x: hidden;
+        &.active {
+            width: $--width-side-nav-active;
+        }
+       }
+       .right-inner {
+            position: absolute;
+            width: calc(100% - #{$--width-side-nav});
+            left: $--width-side-nav;
+            height: 100%;
+            transition: 0.5s;
+            overflow-y: hidden;
+            &.active {
+                width: calc(100% - #{$--width-side-nav-active} - 10px);
+                left: $--width-side-nav-active;
+            }
+            .top-nav {
+                width: 100%;
+                height: $--height-top-nav;
+            }
+            .main-content {
+                width: 100%;
+                height: $--height-main;
+                overflow: hidden;
+            }
+       }
+       @media (max-width: $--breakpoint-lg) {
+        .left-inner {
+            left: -($--width-side-nav);
+            &.active {
+                width: $--width-side-nav;
+                left: 0;
+            }
+        }
+       }
+       @media (max-width: $--breakpoint-sm) {
+        .left-inner {
+            width: 100%;
+            left: -100%;
+            z-index: 1000;
+            &.active {
+                width: 100%;
+                left: 0;
+            }
+        }
+       }
+    }
+}
