@@ -8,8 +8,8 @@ const routes: Routes = [
     redirectTo: ''
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('../modules/dashboard/dashboard-routing.module').then(m => m.DashboardRoutingModule)
+    path: 'management',
+    loadChildren: () => import('../modules/management/management-routing.module').then(m => m.ManagementRoutingModule)
   },
   {
     path: 'user',
