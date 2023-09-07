@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+$--sideNav-subItem-size: 50px;
+
+.sideNavItem {
+    &-container {
+        li {
+            list-style: none;
+            a {
+                position: relative;
+                display: flex;
+                text-decoration: none;
+                padding: 0 0 0 2em;
+                cursor: pointer;
+                &.active {
+                    .sideNavItem-icon {
+                        color: $--blue;
+                    }
+                    .sideNavItem-title {
+                        color: $--blue;
+                        text-shadow: 0 0 10px #96ccf6;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    &-icon {
+        width: $--sideNav-subItem-size;
+        height: $--sideNav-subItem-size;
+        line-height: $--sideNav-subItem-size;
+        text-align: center;
+        color: $--light;
+    }
+    &-title {
+        height: $--sideNav-subItem-size;
+        line-height: $--sideNav-subItem-size;
+        color: #c0c0c05c;
+    }
+}

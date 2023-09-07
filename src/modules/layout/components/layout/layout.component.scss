@@ -18,13 +18,21 @@ $--width-side-nav-active: 65px;
             height: 100%;
             top: 0;
             left: 0;
-            background-color: rgba($color: $--light, $alpha: 0.1);
-            border-left: 5em solid rgba($color: $--lighter, $alpha: 0.1);
+            background-color: #18334c;
             transition: 0.5s;
             overflow-y: auto;
             overflow-x: hidden;
         &.active {
             width: $--width-side-nav-active;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4em;
+            height: 100%;
+            border-right: 1px solid;
+            background-color: #274159;
+            z-index: -1;
         }
        }
        .right-inner {

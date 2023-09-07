@@ -1,13 +1,29 @@
 <div class="sideNav-container">
     <div class="sideNav-header">
-        <div class="logo">
+        <!-- <div class="logo">
             <img src="assets/img/logo.png" alt="Logo">
         </div>
-        <div class="title">Sales Management</div>
+        <div class="title">Sales Management</div> -->
     </div>
     <div class="sideNav-item">
-        <ng-container>
-            
+        <ng-container *ngFor="let section of sideNavSections; index as i">
+            <ul>
+                <div [ngClass]="{
+                    'sideNav-section': true,
+                    'active': i === 1
+                }">
+                    <span class="icon">
+                        <i [ngClass]="section.icon"></i>
+                    </span>
+                    <span class="title">{{section.title}}</span>
+                </div>
+                <ng-container *ngFor="let item of section.items">
+                    <app-side-nav-item
+                        [sideNavItem]="sideNavItems[item]"
+                        [indexSection]="i">
+                    </app-side-nav-item>
+                </ng-container>
+            </ul>
         </ng-container>
     </div>
 </div>

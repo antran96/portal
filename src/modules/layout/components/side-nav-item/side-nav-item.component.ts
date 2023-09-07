@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SideNavItem } from '../../models';
 
 @Component({
   selector: 'app-side-nav-item',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav-item.component.scss']
 })
 export class SideNavItemComponent implements OnInit {
-
+  @Input() sideNavItem !: SideNavItem
+  @Input() indexSection: any
   constructor() { }
 
   ngOnInit(): void {

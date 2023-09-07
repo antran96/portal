@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-$--blue: #5e72e4;
-$--indigo: #5603ad;
+$--blue: #3fa2f1;
+$--blue-darker: #1d7dca;
+$--indigo: #9C27B0;
 $--purple: #8965e0;
 $--pink: #f3a4b5;
 $--red: #f5365c;
@@ -22,8 +23,8 @@ $--warning: #ff8d72;
 $--danger: #fd5d93;
 $--light: #adb5bd;
 $--dark: #212529;
-$--default: #122d4a;
-$--default-light: #052b64;
+$--default: #081f38;
+$--default-dark: #02162c;
 $--white: #ffffff;
 $--neutral: #ffffff;
 $--darker: black;
@@ -32,7 +33,7 @@ $--breakpoint-sm: 576px;
 $--breakpoint-md: 768px;
 $--breakpoint-lg: 992px;
 $--breakpoint-xl: 1200px;
-$--font-size: .875rem;
+$--font-size: .785rem;
 
 * {
     margin: 0;

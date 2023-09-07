@@ -1,1 +1,17 @@
-<p>side-nav-item works!</p>
+<div class="sideNavItem-container">
+    <li *ngIf="!sideNavItem.submenu">
+        <a [routerLink]="sideNavItem.link" [routerLinkActive]="'active'">
+            <span *ngIf="sideNavItem.icon" class="sideNavItem-icon">
+                <i [ngClass]="sideNavItem.icon"></i>
+            </span>
+            <span class="sideNavItem-title">{{ sideNavItem.title }}</span>
+        </a>
+    </li>
+
+    <li *ngIf="sideNavItem.submenu">
+        <app-side-nav-item 
+            *ngFor="let submenu of sideNavItem.submenu"
+            [sideNavItem]="submenu">
+        </app-side-nav-item>
+    </li>
+</div>

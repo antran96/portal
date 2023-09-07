@@ -11,6 +11,7 @@ export interface SideNavItems {
   }
   
   export interface SideNavSection {
+    icon?: string;
     title?: string;
     items: string[];
   }
