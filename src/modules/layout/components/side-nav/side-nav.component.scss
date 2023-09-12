@@ -54,6 +54,9 @@ $--sideNav-section-icon-size: 40px;
             align-items: center;
             background-color: #bfd0df4f;
             border-radius: 50%;
+            svg, i {
+                font-size: 1.3em;
+            }
         }
         &.active {
             border: 1.5px solid $--blue;

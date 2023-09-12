@@ -14,4 +14,5 @@ export interface SideNavItems {
     icon?: string;
     title?: string;
     items: string[];
+    isActive?: boolean
   }

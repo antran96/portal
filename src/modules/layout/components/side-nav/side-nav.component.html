@@ -10,7 +10,7 @@
             <ul>
                 <div [ngClass]="{
                     'sideNav-section': true,
-                    'active': i === 1
+                    'active': i === 0
                 }">
                     <span class="icon">
                         <i [ngClass]="section.icon"></i>
@@ -20,7 +20,8 @@
                 <ng-container *ngFor="let item of section.items">
                     <app-side-nav-item
                         [sideNavItem]="sideNavItems[item]"
-                        [indexSection]="i">
+                        [indexSection]="i"
+                        (isSectionActive)="onCheckActiveSection($event, i)">
                     </app-side-nav-item>
                 </ng-container>
             </ul>

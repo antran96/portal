@@ -10,7 +10,7 @@ $--sideNav-subItem-size: 50px;
                 position: relative;
                 display: flex;
                 text-decoration: none;
-                padding: 0 0 0 2em;
+                padding: 0 0 0 3em;
                 cursor: pointer;
                 &.active {
                     .sideNavItem-icon {
@@ -31,6 +31,9 @@ $--sideNav-subItem-size: 50px;
         line-height: $--sideNav-subItem-size;
         text-align: center;
         color: $--light;
+        svg, i {
+            font-size: 1.3em;
+        }
     }
     &-title {
         height: $--sideNav-subItem-size;

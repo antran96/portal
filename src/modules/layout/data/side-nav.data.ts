@@ -27,15 +27,18 @@ export const sideNavItems: SideNavItems = {
         icon: 'fa-solid fa-house',
         title: 'Home',
         items: ['Dashboard'],
+        isActive: false
     },
     {
       icon: 'fa-solid fa-clipboard',
       title: 'Managament',
       items: ['Managament'],
+      isActive: false
     },
     {
       icon: 'fa-solid fa-users',
       title: 'Users',
       items: ['Users'],
+      isActive: false
     },
   ];
